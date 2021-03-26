@@ -37,6 +37,7 @@ docutils==0.15.2
 drf-yasg==1.17.1
 http-ece==1.1.0
 httplib2==0.19.0
+gunicorn==19.9.0
 idna==2.8
 inflection==0.5.1
 itypes==1.1.0
