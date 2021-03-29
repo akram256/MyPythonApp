@@ -24,6 +24,7 @@ class User(AbstractBaseUser, PermissionsMixin, BaseAbstractModel):
     first_name = models.CharField(max_length=255, blank=True, null=True)
     last_name = models.CharField(max_length=255, blank=True, null=True)
     email = models.EmailField(blank=True, unique=True, null=True)
+    company_id = models.ForeignKey('companies.Company', on_delete=models.CASCADE)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
