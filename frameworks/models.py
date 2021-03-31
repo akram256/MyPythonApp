@@ -10,7 +10,7 @@ class FrameWorks(BaseAbstractModel):
     """This is a FrameWorks model """
    
     name = models.CharField(max_length=15, unique=True,blank=True, null=True)
-    metricattribute = models.ForeignKey('metrics.MetricAttributes', on_delete=models.CASCADE)
+    metricattributes = models.OneToManyField('metrics.MetricAttributes', on_delete=models.CASCADE)
     founded  = models.CharField(max_length=255, blank=True, null=True)
     support = models.CharField(max_length=255, blank=True, null=True)
     adoption = models.CharField(max_length=255, blank=True, null=True)
